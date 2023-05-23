@@ -29,8 +29,12 @@
               .find({ "team": "team20"})
               .toArray()
               .then(docs => {
-                  var html = "";
-                  for (j = 0; j < 1; j++) {
+
+                const urlParams = new URLSearchParams(queryString);
+
+                    //var html = "";
+                    //var j= 1//urlParams.get('video_id');
+                    for (j = 0; j<docs.length; j++){
                       var result = "<div><h1>" + docs[j].title + " - " + "<a href='/detail.html?id=" + docs[j]._id + "'>View details</a></h1></div>";
                       result = result + '<video  id="'+ docs[j]._id +'" class="azuremediaplayer amp-default-skin" autoplay controls poster="/tradium.jpeg">';
                       result = result + '<source src="" type="application/vnd.ms-sstr+xml" />';
@@ -38,8 +42,8 @@
                       result = result + 'To view this video please enable JavaScript, and consider upgrading to a web browser that supports HTML5 video';
                       result = result + '</p>';
                       result = result + '</video>';
-                      document.getElementById("videos").innerHTML += result;    
-                  }
+                      document.getElementById("videos").innerHTML += result; }  
+                  
                   for (j = 0; j < docs.length; j++) {
                       var myPlayer = amp(''+ docs[j]._id + '', { /* Options */
                       techOrder: ["azureHtml5JS", "flashSS", "html5FairPlayHLS","silverlightSS", "html5"],

@@ -1,11 +1,40 @@
-.video{
-    width: 500px;
+#container{
+    max-width: 1000px;
+    text-align: center;
+    margin: 5rem;
 }
 
 .display{
-    background-color: black;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    background-color:red ;
+    padding-left: 300px;
+    
 }
 
-.h1{
-    color: rgb(255, 255, 255);
+
+.vjs-tech{
+    max-width: auto;
+    align-items: center;
+
+    margin: 0 auto;
+}
+
+video{
+    border: 10px solid;
+    align-content: center;
+   
+    
+    
+}
+
+h1{
+    text-align: center;
+}
+
+h2{
+    font-size: 5rem;
+    text-align: center;
+    margin-left: 10rem;
 }

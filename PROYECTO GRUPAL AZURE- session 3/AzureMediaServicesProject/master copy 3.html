@@ -30,7 +30,7 @@
               .toArray()
               .then(docs => {
                   var html = "";
-                  for (j = 0; j < 1; j++) {
+                  for (j = 1; j < 2; j++) {
                       var result = "<div><h1>" + docs[j].title + " - " + "<a href='/detail.html?id=" + docs[j]._id + "'>View details</a></h1></div>";
                       result = result + '<video  id="'+ docs[j]._id +'" class="azuremediaplayer amp-default-skin" autoplay controls poster="/tradium.jpeg">';
                       result = result + '<source src="" type="application/vnd.ms-sstr+xml" />';
@@ -40,7 +40,7 @@
                       result = result + '</video>';
                       document.getElementById("videos").innerHTML += result;    
                   }
-                  for (j = 0; j < docs.length; j++) {
+                  for (j = 1; j < 2; j++) {
                       var myPlayer = amp(''+ docs[j]._id + '', { /* Options */
                       techOrder: ["azureHtml5JS", "flashSS", "html5FairPlayHLS","silverlightSS", "html5"],
                       "nativeControlsForTouch": false,
